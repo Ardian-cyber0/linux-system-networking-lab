@@ -1,0 +1,3 @@
+tests/permission-test.txt
+__pycache__/
+*.pyc
