@@ -1,18 +1,18 @@
-Linux System & Networking Lab
+# Linux System & Networking Lab
 
 A practical Linux system administration and networking laboratory built in a Termux/Android environment.
 
 This project focuses on understanding Linux fundamentals through hands-on testing, documentation, troubleshooting, and verification rather than only memorizing commands.
 
-Environment
+## Environment
 
-- Platform: Android 11 / Termux
-- Linux Kernel: 4.19.127
-- Architecture: ARMv7 (32-bit)
-- Shell: Bash
-- User: "u0_a203"
+- **Platform:** Android 11 / Termux
+- **Linux Kernel:** 4.19.127
+- **Architecture:** ARMv7 (32-bit)
+- **Shell:** Bash
+- **User:** `u0_a203`
 
-Objectives
+## Objectives
 
 - Understand Linux system and network fundamentals
 - Practice user and group management concepts
@@ -22,9 +22,9 @@ Objectives
 - Perform basic network troubleshooting
 - Understand platform-specific administration limitations
 
-Lab Areas
+## Lab Areas
 
-1. System & Network Baseline
+### 1. System & Network Baseline
 
 Verified:
 
@@ -36,11 +36,9 @@ Verified:
 - DNS resolution
 - HTTPS connectivity
 
-Evidence:
+**Evidence:** [System & Network Baseline](docs/system-baseline.md)
 
-""docs/system-baseline.md"" (docs/system-baseline.md)
-
-2. Users & Groups
+### 2. Users & Groups
 
 Practiced:
 
@@ -49,65 +47,55 @@ Practiced:
 - Primary and supplementary groups
 - SELinux security context
 
-Evidence:
+**Evidence:** [Users & Groups](docs/users-groups.md)
 
-""docs/users-groups.md"" (docs/users-groups.md)
-
-3. File Permissions
+### 3. File Permissions
 
 Practiced:
 
-- Reading file permissions with "ls -l"
-- Changing permissions with "chmod"
+- Reading file permissions with `ls -l`
+- Changing permissions with `chmod`
 - Verifying access restrictions through an actual write attempt
 
 Example:
 
-"chmod 400"
+`chmod 400 tests/permission-test.txt`
 
-Evidence:
+**Evidence:** [File Permissions](docs/permissions.md)
 
-""docs/permissions.md"" (docs/permissions.md)
-
-4. Process Management
+### 4. Process Management
 
 Practiced:
 
-- "ps"
-- "ps -ef"
-- "ps -A"
-- "pstree"
+- `ps`
+- `ps -ef`
+- `ps -A`
+- `pstree`
 - Understanding PID and PPID
 - Observing parent-child process relationships
 
-Evidence:
+**Evidence:** [Process Management](docs/processes.md)
 
-""docs/processes.md"" (docs/processes.md)
-
-5. Log Analysis
+### 5. Log Analysis
 
 Practiced:
 
-- Collecting Android system logs with "logcat"
+- Collecting Android system logs with `logcat`
 - Identifying informational, warning, and error messages
 - Observing Android SELinux audit events
-- Interpreting "avc: granted" entries in context
+- Interpreting `avc: granted` entries in context
 
-Evidence:
+**Evidence:** [Log Analysis](docs/logs.md)
 
-""docs/logs.md"" (docs/logs.md)
-
-6. Service Management
+### 6. Service Management
 
 Documented the differences between a conventional Linux distribution using systemd and the Android/Termux environment.
 
-Rather than assuming "systemctl" is available, the lab records the platform limitation and uses process inspection where appropriate.
+Rather than assuming `systemctl` is available, the lab records the platform limitation and uses process inspection where appropriate.
 
-Evidence:
+**Evidence:** [Service Management](docs/services.md)
 
-""docs/services.md"" (docs/services.md)
-
-Troubleshooting Approach
+## Troubleshooting Approach
 
 The lab follows a simple troubleshooting workflow:
 
@@ -120,11 +108,9 @@ The lab follows a simple troubleshooting workflow:
 
 For example, network troubleshooting was performed by separating:
 
-"Gateway → Internet → DNS → HTTPS"
+`Gateway → Internet → DNS → HTTPS`
 
-This makes it possible to determine which layer is functioning or requires further investigation.
-
-Key Skills Demonstrated
+## Key Skills Demonstrated
 
 - Linux command-line fundamentals
 - Network troubleshooting
@@ -136,20 +122,20 @@ Key Skills Demonstrated
 - Technical documentation
 - Platform limitation awareness
 
-Project Structure
+## Project Structure
 
-linux-system-networking-lab/
-├── README.md
-├── docs/
-│   ├── system-baseline.md
-│   ├── users-groups.md
-│   ├── permissions.md
-│   ├── processes.md
-│   ├── logs.md
-│   └── services.md
-└── tests/
+    linux-system-networking-lab/
+    ├── README.md
+    ├── docs/
+    │   ├── system-baseline.md
+    │   ├── users-groups.md
+    │   ├── permissions.md
+    │   ├── processes.md
+    │   ├── logs.md
+    │   └── services.md
+    └── tests/
 
-Notes
+## Notes
 
 This laboratory is performed in Termux on Android rather than a conventional Linux server.
 
@@ -157,8 +143,8 @@ Some Linux administration features, especially system-level service management, 
 
 The project documents those limitations instead of presenting unsupported functionality as if it were available.
 
-Status
+## Status
 
-In progress
+**In progress**
 
 Future work may include additional troubleshooting scenarios, security auditing exercises, and more advanced Linux administration tasks.
